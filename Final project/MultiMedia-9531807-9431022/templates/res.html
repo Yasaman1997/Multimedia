@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="fa">
+<meta charset="utf-8">
+
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" ,rel="stylesheet">
+
+<link rel="stylesheet" href="/static/_css/1.css"/>
+
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+
+        .body{
+            background-color: blanchedalmond;
+        }
+        * {
+            box-sizing: border-box;
+        }
+
+        .container1 {
+            position: absolute;
+            max-width: 300px;
+            TOP: 10%;
+            LEFT: 10%;
+            WIDTH: 400px;
+            HEIGHT: 300px;
+        }
+
+        .image1 {
+            /*position: absolute;*/
+            TOP: 10%;
+            LEFT: 10%;
+            WIDTH: 400px;
+            HEIGHT: 300px;
+            border-radius: 40%;
+            display: block;
+
+        }
+
+        .container2 {
+            position: absolute;
+            max-width: 300px;
+            TOP: 10%;
+            RIGHT: 16%;
+            WIDTH: 400px;
+            HEIGHT: 300px;
+        }
+
+        .image2 {
+            /*position: absolute;*/
+            border-radius: 40%;
+
+            TOP: 10%;
+            RIGHT: 16%;
+            WIDTH: 400px;
+            HEIGHT: 300px;
+            display: block;
+
+        }
+
+        .container3 {
+            position: absolute;
+            max-width: 300px;
+            TOP: 60%;
+            LEFT: 10%;
+            WIDTH: 400px;
+            HEIGHT: 300px;
+        }
+
+        .image3 {
+            border-radius: 40%;
+            TOP: 60%;
+            LEFT: 10%;
+            WIDTH: 400px;
+            HEIGHT: 300px;
+            display: block;
+
+        }
+
+        .container4 {
+            border-radius: 40%;
+            position: absolute;
+            max-width: 300px;
+            TOP: 60%;
+            RIGHT: 16%;
+            WIDTH: 400px;
+            HEIGHT: 300px;
+        }
+
+        .image4 {
+            /*position: absolute;*/
+            border-radius: 40%;
+            TOP: 60%;
+            RIGHT: 16%;
+            WIDTH: 400px;
+            HEIGHT: 300px;
+            display: block;
+
+        }
+
+
+        .overlay {
+            border-radius: 40%;
+            left: 17%;
+            position: absolute;
+            bottom: 30%;
+            background: rgb(0, 0, 0);
+            background: rgba(0, 0, 0, 0.5); /* Black see-through */
+            color: #f1f1f1;
+            width: 100%;
+            transition: .5s ease;
+            opacity: 0;
+            color: white;
+            font-size: 20px;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .container1:hover .overlay {
+            opacity: 1;
+        }
+
+        .container2:hover .overlay {
+            opacity: 1;
+        }
+
+        .container3:hover .overlay {
+            opacity: 1;
+        }
+
+        .container4:hover .overlay {
+            opacity: 1;
+        }
+
+        .main_txt {
+            width: 530px;
+            height: 440px;
+            border: 1px solid blueviolet;
+            text-shadow: 2px 2px LightSteelBlue;
+            text-align: center;
+            font-family: Vazir;
+            font-size: 24px;
+            margin-left: 635px;
+            margin-top: 98px;
+            overflow: -moz-scrollbars-vertical;
+        }
+
+        .title{
+            width: 530px;
+            /*height: 500px;*/
+            text-shadow: 2px 2px LightSteelBlue;
+            text-align: center;
+            font-family: Vazir;
+            font-size: 30px;
+            margin-left: 635px;
+            margin-top: 20px;
+
+        }
+    </style>
+</head>
+
+<body style="background-color: lavenderblush">
+
+<div class="title">
+    The Detected Natural Disaster:
+    {{label | safe}}
+</div>
+
+<div class="container1">
+    <a href="https://en.wikipedia.org/wiki/Flood">
+        <img src="../static/_images/1.jpg" alt="image1" class="image1">
+        <div class="overlay">flood</div>
+    </a>
+</div>
+
+<div class="container2">
+    <a href="https://en.wikipedia.org/wiki/Cyclone">
+        <img src="../static/_images/2.jpg" alt="image2" class="image2">
+        <div class="overlay">Cyclone</div>
+    </a>
+
+</div>
+
+<div class="container3">
+    <a href="https://en.wikipedia.org/wiki/Earthquake">
+        <img src="../static/_images/3.jpg" alt="image3" class="image3">
+        <div class="overlay">Earthquake</div>
+    </a>
+</div>
+
+<div class="container4">
+    <a href="https://en.wikipedia.org/wiki/Wildfire">
+        <img src="../static/_images/4.jpg" alt="image4" class="image4">
+        <div class="overlay">Wildfire</div>
+    </a>
+</div>
+
+<textarea class="main_txt">
+        {{ page_content | safe}}
+</textarea>
+
+</body>
+</html>
